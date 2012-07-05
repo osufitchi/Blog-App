@@ -1,6 +1,7 @@
 from django.conf.urls.defaults import patterns, include, url
 from django.views.generic import ListView, DetailView
 from myapp.views import index
+from blog.views import create_post
 from blog.models import Post
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -13,6 +14,7 @@ urlpatterns = patterns('',
     url(r'^$',index),
     url(r'^blog/$',ListView.as_view(model=Post)),
     url(r'^blog/(?P<id>/d+)/$',DetailView.as_view(model=Post)),
+    url(r'^post/$',create_post),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

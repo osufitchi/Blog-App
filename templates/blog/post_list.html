@@ -1,5 +1,7 @@
-{% for object in object_list %}
+{% for post in object_list %}
 <h1>{{post.title}}</h1>
-<p>{{post.content}}</h1>
+<p>{{post.content}}</p>
+<p>Written by:</p>
+<p>{{post.author}}</p>
 {% endfor %}
 
